@@ -11,7 +11,9 @@ app.controller('GameController', function ($scope, $timeout, GameService) {
 
 
     $scope.selectCard = function (card) {
-        
+        if(card.show === true){
+            return;
+        }
         //assign the cards to either card 1 or card 2...
         if (!$scope.card1) {
             card.show = true;
