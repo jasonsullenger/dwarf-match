@@ -2,7 +2,7 @@ app.service('GameService', function () {
 
 	var imgRoot = 'assets/img/cards/'
 
-	 function Deck() {
+	function Deck() {
 		this.cards = [{
 			title: 'Battle Axe',
 			url: imgRoot + 'battle-axe.png',
@@ -31,7 +31,7 @@ app.service('GameService', function () {
 				title: 'Hammer',
 				url: imgRoot + 'flat-hammer.png',
 			}, {
-				title: 'Guantlet',
+				title: 'Gauntlet',
 				url: imgRoot + 'mailed-fist.png',
 			}, {
 				title: 'Meat',
@@ -49,10 +49,9 @@ app.service('GameService', function () {
 		return shuffled;
 	}
 
-
 	function shuffle(deck) {
-    for (var j, x, i = deck.length; i; j = Math.floor(Math.random() * i), x = deck[--i], deck[i] = deck[j], deck[j] = x);
-    return deck;
+		for (var j, x, i = deck.length; i; j = Math.floor(Math.random() * i), x = deck[--i], deck[i] = deck[j], deck[j] = x);
+		return deck;
 	}
 
 })
